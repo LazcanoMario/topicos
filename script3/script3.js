@@ -1,24 +1,22 @@
 
-function numeroAleatorio(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+function generarRandomParrafo() {
+    const palabras = ['manzana', 'banana', 'naranja', 'uva', 'pera', 'sandía', 'melón', 'kiwi', 'fresa', 'limón'];
   
-
-  function textoAleatorio() {
-    const length = numeroAleatorio(50, 100);
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ';
-    let text = '';
-    for (let i = 0; i < length; i++) {
-      text += characters.charAt(Math.floor(Math.random() * characters.length));
+    const parrafoLargo = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+    let parrafoText = '';
+  
+    for (let i = 0; i < parrafoLargo; i++) {
+      const palabraRandom = Math.floor(Math.random() * palabras.length);
+      parrafoText += palabras[palabraRandom] + ' ';
     }
-    return text;
+  
+    return parrafoText;
   }
   
   for (let i = 0; i < 5; i++) {
     const paragraph = document.createElement('p');
-    const text = textoAleatorio();
+    const text = generarRandomParrafo();
     paragraph.textContent = text;
     paragraph.textContent += ' [Tamaño: ' + text.length + ' caracteres]';
     document.body.appendChild(paragraph);
   }
-  
