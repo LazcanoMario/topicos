@@ -106,4 +106,41 @@ tamaño del texto de cada párrafo deberá ser entre
 50 y 100 palabras. [Se deberá mostrar el tamaño de
 caracteres que tenga cada párrafo]
 
+Creare un arreglo dentro de una funcion que incluya las palabras a usar, esta vez decidi usar frutas! ♥
+
+Esta misma funcion realizara el proceso del numero aleatorio el cual influira en la palabra!.
+``` Javascript
+function generarRandomParrafo() {
+    const palabras = ['manzana', 'banana', 'naranja', 'uva', 'pera', 'sandía', 'melón', 'kiwi', 'fresa', 'limón'];
+ const parrafoLargo = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+    let parrafoText = '';
+
+```
+A su vez dentro de la funcion decidi meter el ciclo para hacerlo las veces necesarias para el optimo resultado.
+``` Javascript
+  for (let i = 0; i < parrafoLargo; i++) {
+      const palabraRandom = Math.floor(Math.random() * palabras.length);
+      parrafoText += palabras[palabraRandom] + ' ';
+``` 
+Finalizando  con un ciclo que crea los 5 elementos < p > y los agrega al cuerpo del documento HTML
+el ciclo contiene las siguientes caracteristicas: 
+
+genera un texto aleatorio utilizando la función generarRandomParrafo().
+
+Se añade al texto la longitud del párrafo generado en caracteres.
+
+Este texto se establece como contenido del párrafo (< p >).
+
+
+``` Javascript
+ for (let i = 0; i < 5; i++) {
+    const paragraph = document.createElement('p');
+    const text = generarRandomParrafo();
+    paragraph.textContent = text;
+    paragraph.textContent += ' [Tamaño: ' + text.length + ' caracteres]';
+    document.body.appendChild(paragraph);
+  }
+
+```
+Y con eso finalizamos la documentacion espero sea del agrado del usuario/lector.
 
