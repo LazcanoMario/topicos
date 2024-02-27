@@ -1,23 +1,5 @@
 const coloresUsados = [];
-const colores = [
-  'Red',
-  'Green',
-  'Blue',
-  'Yellow',
-  'Magenta',
-  'Cyan',
-  'Orange',
-  'Purple',
-  'Turquoise',
-  'Pink',
-  'Black',
-  'White',
-  'Gray',
-  'Brown',
-  'SkyBlue',
-  'Lime',
-  'Melon',
-  'Salmon',
+const colores = ['Red', 'Green','Blue','Yellow','Magenta','Cyan','Orange','Purple','Turquoise','Pink','Black','White','Gray','Brown','SkyBlue','Lime','Melon','Salmon',
   'Orchid',
   'Emerald'
 ];
